@@ -123,8 +123,8 @@ public class HCVimeoVideoExtractor: NSObject {
                       else {
                         if let hls = (data as NSDictionary).value(forKeyPath: "request.files.hls.cdns") as? [String: AnyObject],
                            let url = hls.first?.value["url"] as? String {
-                            video.videoURL[.quality1080p] = URL(string: url)
-                            video.videoURL[.qualityUnknown] = URL(string: url)
+                            video.videoURL[.Quality1080p] = URL(string: url)
+                            video.videoURL[.QualityUnknown] = URL(string: url)
                         }
                       }
                         
@@ -151,11 +151,11 @@ public class HCVimeoVideoExtractor: NSObject {
     }
  
     private func videoQualityWith(string: String) -> HCVimeoVideoQuality {
-        return HCVimeoVideoQuality(rawValue: string) ?? .qualityUnknown
+        return HCVimeoVideoQuality(rawValue: string) ?? .QualityUnknown
     }
     
     private func thumbnailQualityWith(string: String) -> HCVimeoThumbnailQuality {
-        return HCVimeoThumbnailQuality(rawValue: string) ?? .qualityUnknown
+        return HCVimeoThumbnailQuality(rawValue: string) ?? .QualityUnknown
     }
 }
 #endif
