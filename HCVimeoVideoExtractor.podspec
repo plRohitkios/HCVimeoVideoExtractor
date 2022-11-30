@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'HCVimeoVideoExtractor'
+  s.name             = 'HCVimeoVideoExtractor-Test'
   s.version          = '0.0.4'
   s.summary          = 'HCVimeoVideoExtractor is an easy way to extract the Vimeo video details.'
 
