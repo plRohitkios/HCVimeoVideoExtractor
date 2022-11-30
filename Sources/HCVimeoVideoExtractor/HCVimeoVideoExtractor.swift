@@ -155,7 +155,7 @@ public class HCVimeoVideoExtractor: NSObject {
     }
     
     private func thumbnailQualityWith(string: String) -> HCVimeoThumbnailQuality {
-        return HCVimeoThumbnailQuality(rawValue: string) ?? .QualityUnknown
+        return HCVimeoThumbnailQuality(rawValue: string) ?? .qualityUnknown
     }
 }
 #endif
